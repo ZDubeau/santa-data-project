@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  postgres:
+    image: "postgres:latest"
+    environment:
+      POSTGRES_USER: "santa"
+      POSTGRES_PASSWORD: "claus"
+      POSTGRES_DB: "santa_data"
+    volumes:
+      - "./data/postgres:/var/lib/postgresql/data"
+    ports:
+      - "5432:5432"
+
